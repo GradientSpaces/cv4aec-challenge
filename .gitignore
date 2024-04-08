@@ -1,0 +1,4 @@
+.DS_store
+Makefile.vc
+build/
+samples/
