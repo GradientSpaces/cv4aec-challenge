@@ -30,7 +30,7 @@ def read_endpoints(structures: np.ndarray) -> Tuple[Dict, np.ndarray]:
         x2, y2, z2 = structure[3:6]
         
         width, depth, height = structure[6:9]
-        w2, d2, h2 = (width / 2), (depth / 2), (height / 2)
+        w2, d2 = (width / 2), (depth / 2)
 
         d = np.array([(x2 - x1), (y2 - y1)], dtype=np.float32)
         if d.sum() == 0:
@@ -69,7 +69,7 @@ def read_endpoints(structures: np.ndarray) -> Tuple[Dict, np.ndarray]:
         # Points:      [0 , 1 , 2 , 3 , 4 -- , 5 -- , 6 -- , 7 -- ]
         x = np.asarray([x1, x2, x2, x1, x1   , x2   , x2   , x1   ])
         y = np.asarray([y1, y2, y2, y1, y1   , y2   , y2   , y1   ])
-        z = np.asarray([z1, z1, z1, z1, z1+h2, z1+h2, z1+h2, z1+h2])
+        z = np.asarray([z1, z1, z1, z1, z1+height, z1+height, z1+height, z1+height])
 
         corners = np.vstack([x, y, z]).transpose()
         corners[:, :2] += sides
