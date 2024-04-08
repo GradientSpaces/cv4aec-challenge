@@ -97,8 +97,8 @@ You may want to configure some parameters in `src/config.py` before buid.
 git git@github.com:GradientSpaces/cv4aec-challenge.git
 cd cv4aec-challenge/3d-matching-eval
 
-# Build Docker image.
-docker build -t cvpr-2024-matching .
+# Pull docker image
+docker image pull sayandsarkar/3dm-cv4aec:latest
 
 # Run image and evaluate.
 # NOTE: Put all your JSON data in ./data/.
@@ -106,7 +106,7 @@ docker run \
     -v {full/path/to/ground-truth/directory/}:/data/ \
     -v {full/path/to/users-models/directory/}:/predicted/ \
     -v {full/path/to/output/directory/}:/code/output \
-    -it 3d-matching-eval /bin/bash
+    -it sayandsarkar/3dm-cv4aec:latest /bin/bash
 
 python main.py ../data/{reference_model}.json ../predicted/{user_model}.json --output/match.json
 
