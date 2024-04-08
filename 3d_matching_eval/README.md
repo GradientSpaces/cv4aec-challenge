@@ -94,11 +94,11 @@ You may want to configure some parameters in `src/config.py` before buid.
 
 ```bash
 # Clone the repository.
-git clone git@github.com:cv4aec/3d-matching-eval.git
-cd 3d-matching-eval
+git git@github.com:GradientSpaces/cv4aec-challenge.git
+cd cv4aec-challenge/3d-matching-eval
 
 # Build Docker image.
-docker build -t cvpr-2023-matching .
+docker build -t cvpr-2024-matching .
 
 # Run image and evaluate.
 # NOTE: Put all your JSON data in ./data/.
