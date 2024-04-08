@@ -1,4 +1,14 @@
+.vs
+.vscode
 .DS_store
-Makefile.vc
-build/
-samples/
+
+# Python
+__pycache__
+
+# Data & Build
+2d_floorplan_eval/build/
+2d_floorplan_eval/samples/
+2d_floorplan_eval/Makefile.vc
+3d_matching_eval/data
+3d_matching_eval/output
+3d_matching_eval/reference_test*
