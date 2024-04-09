@@ -98,7 +98,7 @@ git git@github.com:GradientSpaces/cv4aec-challenge.git
 cd cv4aec-challenge/3d-matching-eval
 
 # Pull docker image
-docker image pull sayandsarkar/3dm-cv4aec:latest
+docker pull sayandsarkar/3dm-cv4aec:latest
 
 # Run image and evaluate.
 # NOTE: Put all your JSON data in ./data/.
@@ -111,10 +111,10 @@ docker run \
 python main.py ../data/{reference_model}.json ../predicted/{user_model}.json --output/match.json
 
 # Example:
-python main.py ../data/OfficeLab01_Allfloors_columns.json ../predicted/OfficeLab01_Allfloors_columns.json --output output/match.json
+python main.py ../data/MedOffice02_Allfloors_columns.json ../predicted/MedOffice02_Allfloors_columns.json --output output/match.json
 ```
 
 **Note**: you need to pass a directory path or a file path to the script.
 
 * When the path is a (like `./data`) directory the script searches for all models inside one level deep.
-* When the path is a file (like `*_columns.json`) the script uses regular expressions to extract the model name of the file. Then it searches for all the data for that model inside the directory. It means that if you pass `../data/OfficeLab01_Allfloors_columns.json` file to the script, it will search for all the files with `OfficeLab01` model name around.
+* When the path is a file (like `*_columns.json`) the script uses regular expressions to extract the model name of the file. Then it searches for all the data for that model inside the directory. It means that if you pass `../data/MedOffice02_Allfloors_columns.json` file to the script, it will search for all the files with `MedOffice02` model name around.

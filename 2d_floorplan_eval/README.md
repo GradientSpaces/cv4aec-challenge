@@ -50,12 +50,3 @@ A sample obj file is given below (it should be in binary practically):
  - number of points
  - x y coordinates for each point
 ```
-### Geometric Metrics :
-
-- IoU of the each room (a room is defined as a completely separated area with walls and doors).
-- Accuracy of endpoints. Precision/Recall at 3 different thresholds: 5cm, 10cm and 20cm, as well as the F-measure at each threshold will be evaluated in the coordinate system of the point cloud. The provided endpoints will be matched with the Hungarian algorithm to the point cloud, and every point that is within a certain threshold will be determined as a match.
-- Orientation. For each matched line between the ground truth, we will compute the cosine similarity metric between them as the normalized dot product. If a line is not matched with ground truth, the cosine metric will be zero. Finally, the metric will be averaged over all the ground truth lines. 
-
-### Topological Metrics :
-- Warping error([Jain et al. 2010](https://ieeexplore.ieee.org/document/5539950)) : The warping error will first warp the predicted floorplan to the ground truth with a homotopic deformation, and then compute the pixels that cannot match after the deformation.
-- Betti number error :The Betti number error will compare the Betti numbers between the prediction and the ground truth and output the absolute value of the difference. 
