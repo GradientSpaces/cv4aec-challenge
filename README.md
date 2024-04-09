@@ -17,7 +17,10 @@ Links to Download Data:
 - [Testing Data: Point Cloud ONLY](https://oregonstate.box.com/s/fhuzl8lfi1sxa4e0rw3w7ynw0erdsicx)
 
 ## Submission
-The submission should be made in the same JSON format as in the provided ground truth. The codalab submission portal will open on **18 April, 2024**. Links will be updated on the website!
+The submission should be made in the same JSON format as in the provided ground truth. Codalab challenge links:
+
+- 2D Floorplan Reconstruction: [Challenge](https://codalab.lisn.upsaclay.fr/competitions/18523)
+- 3D Building Model Reconstruction: [Challenge](https://codalab.lisn.upsaclay.fr/competitions/18526)
 
 > We would like to note that ALL the submissions **need to be constructed automatically** . Manual reconstructions are against the spirit of this challenge and will not be allowed.
 
